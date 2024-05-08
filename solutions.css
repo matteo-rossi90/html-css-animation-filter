@@ -11,7 +11,7 @@
 /* soluzione esercizio 2 */
 
 .ex-2-square {
-    transition: all 2s;
+    transition: width 2s;
 }
 
 .ex-2-square:active {
@@ -53,3 +53,59 @@
     width: 60px;
     height: 60px;
 }
+
+/* soluzione esercizio 6 */
+
+.well:hover .ex-6-img{
+    filter: grayscale(1);
+}
+
+/* soluzione esercizio 7 */
+
+.well .ex-7-img {
+    transition: all 0.6s ease;
+}
+
+.well:hover .ex-7-img {
+    filter: grayscale(1);
+}
+
+/* soluzione esercizio 8 */
+
+.well .ex-8-img {
+    transition: 0.6s ease;
+}
+
+.well:hover .ex-8-img {
+    border-radius: 10px;
+    filter: grayscale(1);
+}
+
+/* soluzione esercizio 9 */
+
+.well .ex-9-img {
+    transition: 1s ease;
+}
+
+.well:hover .ex-9-img {
+    transform: scale(1.5);
+    border-radius: 15px;
+    filter: grayscale(1);
+}
+
+/* soluzione esercizio 10 */
+
+.ex-10-icon {
+   animation: rotation-icon 2s infinite linear;
+}
+
+@keyframes rotation-icon {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        }
+}
+
+
