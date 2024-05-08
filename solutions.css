@@ -45,13 +45,12 @@
 }
 
 .ex-5-square:hover {
-    width: 100px;
-    height: 100px;
+    transform: scale(2);
+    
 }
 
 .ex-5-square:active {
-    width: 60px;
-    height: 60px;
+    transform: scale(0.4);
 }
 
 /* soluzione esercizio 6 */
@@ -67,7 +66,7 @@
 }
 
 .well:hover .ex-7-img {
-    filter: grayscale(1);
+    filter: grayscale(0.5) brightness(0.6);
 }
 
 /* soluzione esercizio 8 */
@@ -78,7 +77,7 @@
 
 .well:hover .ex-8-img {
     border-radius: 10px;
-    filter: grayscale(1);
+    filter: grayscale(0.5) brightness(0.6);
 }
 
 /* soluzione esercizio 9 */
@@ -90,16 +89,16 @@
 .well:hover .ex-9-img {
     transform: scale(1.5);
     border-radius: 15px;
-    filter: grayscale(1);
+    filter: grayscale(0.5) brightness(0.6);
 }
 
 /* soluzione esercizio 10 */
 
 .ex-10-icon {
-   animation: rotation-icon 2s infinite linear;
+   animation: rotation-endless 2s infinite linear;
 }
 
-@keyframes rotation-icon {
+@keyframes rotation-endless {
     0% {
         transform: rotate(0deg);
     }
@@ -107,5 +106,136 @@
         transform: rotate(360deg);
         }
 }
+
+/* soluzione esercizio 11 */
+
+.ex-11-icon:hover {
+    animation: rotation-icon-round 2s;
+}
+
+@keyframes rotation-icon-round {
+    0% {
+        transform: rotate(0deg);
+        transition-delay: ease;
+    }
+
+    80% {
+        transform: rotate(320deg);
+    }
+}
+
+/* soluzione esercizio 12 */
+
+.ex-12-button:hover .ex-12-top-white{
+    animation: moveTop-white 2s;
+}
+
+@keyframes moveTop-white {
+    0% {
+        left: 20%;
+    }
+
+    50% {
+        left: calc(100% - 50px);
+    }
+
+    0% {
+        left: 20%;
+    }
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: moveBottom-white 2s;
+}
+
+@keyframes moveBottom-white {
+    0% {
+        right: 20%;
+    }
+
+    50% {
+        right: calc(100% - 50px);
+    }
+
+    0% {
+        right: 20%;
+    }
+}
+
+/* soluzione esercizio 13 */
+
+.ex-13-button:hover .ex-13-top-white {
+    animation: moveTop-white-endless 2s linear infinite;
+}
+
+@keyframes moveTop-white-endless {
+    0% {
+        left: 10%;
+        top: -10px;
+    }
+
+    30% {
+        left: calc(100% - 30px);
+        top: -10px;
+    }
+
+    45% {
+        left: calc(100% - 30px);
+        top: 100%;
+    }
+
+    75%{
+        left: 0;
+        top: 100%;
+    }
+
+    90% {
+        left: -15px;
+        top: -10px;
+    }
+    
+    100% {
+        left: 10%;
+        top: -10px;
+    }
+}
+
+.ex-13-button:hover .ex-13-bottom-white {
+    animation: moveBottom-white-endless 2s linear infinite;
+}
+
+@keyframes moveBottom-white-endless {
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+
+    30% {
+        bottom: -10px;
+        right: calc(100% - 30px);
+    }
+
+    45% {
+        bottom: 100%;
+        right: calc(100% - 30px);
+    }
+
+    75%{
+        bottom: 100%;
+        right: 0;
+
+    }
+
+    90%{
+        bottom: -10px;
+        right: -15px;
+    }
+
+    100%{
+        bottom: 20%;
+        right: -10px;
+    }
+}
+
 
 
